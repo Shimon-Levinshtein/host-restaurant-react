@@ -1,0 +1,15 @@
+.continer {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    .guest_room {
+        width: fit-content;
+        background-color: rgb(241, 241, 241);
+        padding: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 70%;
+    }
+}
