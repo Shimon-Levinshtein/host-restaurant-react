@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./CreatTeable.module.scss";
 import { connect } from 'react-redux';
+import ToolTop from './ToolTop/ToolTop';
 
 const CreatTeable = props => {
 
@@ -29,8 +30,8 @@ const CreatTeable = props => {
     }, [tibelData])
     return (
         <div className={styles.continer}>
+            <ToolTop tibelData={tibelData}/>
             <div className={shape}>
-                {tibelData.Table}
             </div>
         </div>
     );

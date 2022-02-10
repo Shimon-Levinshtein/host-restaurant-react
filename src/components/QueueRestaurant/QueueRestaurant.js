@@ -8,8 +8,8 @@ const QueueRestaurant = props => {
     const ordersList = props.ordersList;
 
     const listOrderHandler = () => {
-        return ordersList.map((order) => (
-            <Queue orderData={order} />
+        return ordersList.map((order, index) => (
+            <Queue key={index} orderData={order} />
         ))
     };
 

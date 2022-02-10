@@ -1,0 +1,32 @@
+.continer {
+   background-color: rgb(193, 255, 255);
+   padding: 7px;
+   border-radius: 10px;
+   position: absolute;
+   width: 100px;
+   z-index: 100;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+   top: -50px; 
+   text-align: center;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   .text_continer {
+       font-size: 12px;
+       font-weight: bold;
+       position: relative;
+       .arrow {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: rgb(193, 255, 255);
+         transform: rotate(45deg);
+         bottom: -12px;
+         margin-left: auto;
+         margin-right: auto;
+         left: 0;
+         right: 0;
+       }
+   }
+}

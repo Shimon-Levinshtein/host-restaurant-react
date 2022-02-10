@@ -10,12 +10,15 @@ const GuestRoom = props => {
 
     const tibelsHandler = () => {
         return tablesList.map((tibel, index) => (
-            <CreatTeable tibelData={tibel} />
+            <CreatTeable key={index} tibelData={tibel} />
         ))
     };
 
     return (
         <div className={styles.continer}>
+            <div className={styles.guest_room_title}>
+                <h1>GUEST ROOM</h1>
+            </div>
             <div className={styles.guest_room}>
                 {tibelsHandler()}
             </div>

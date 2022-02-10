@@ -8,15 +8,15 @@ const CompletedOrders = props => {
     const completedOrdersList = props.completedOrdersList;
 
     const listOrderHandler = () => {
-        return completedOrdersList.map((item) => (
-            <Item itemData={item} />
+        return completedOrdersList.map((item, index) => (
+            <Item key={index} itemData={item} />
         ))
     };
 
     return (
         <div className={styles.continer}>
             <div className={styles.item}>
-                <h3>Waiting queue</h3>
+                <h3>Completed orders</h3>
                 {listOrderHandler()}
             </div>
         </div>
