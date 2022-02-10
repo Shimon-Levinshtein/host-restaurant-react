@@ -86,17 +86,11 @@ const defaultState = [
     }
 ];
 
-const variable = (state = defaultState, action) => {
+const tables = (state = defaultState, action) => {
     switch (action.type) {
-        // case SING_UP:
-        //     const newStateA = { ...state };
-        //     newStateA['singUp'] = action.payload;
-        //     return newStateA;
-        
         default:
             return state;
-
     }
-}
+};
 
-export default variable;
+export default tables;

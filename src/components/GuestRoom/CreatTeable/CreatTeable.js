@@ -27,7 +27,6 @@ const CreatTeable = props => {
                 break;
         };
     }, [tibelData])
-        console.log(tibelData);
     return (
         <div className={styles.continer}>
             <div className={shape}>
