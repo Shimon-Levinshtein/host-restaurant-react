@@ -5,8 +5,8 @@ const defaultState = [
         Table: 101,
         Diners: 1,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             102,
@@ -17,8 +17,8 @@ const defaultState = [
         Table: 102,
         Diners: 1,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             101,
@@ -29,8 +29,8 @@ const defaultState = [
         Table: 103,
         Diners: 1,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             101,
@@ -41,8 +41,8 @@ const defaultState = [
         Table: 201,
         Diners: 2,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             202
@@ -52,8 +52,8 @@ const defaultState = [
         Table: 202,
         Diners: 2,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             201
@@ -63,8 +63,8 @@ const defaultState = [
         Table: 203,
         Diners: 2,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             601
@@ -74,8 +74,8 @@ const defaultState = [
         Table: 301,
         Diners: 3,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: []
     },
@@ -83,8 +83,8 @@ const defaultState = [
         Table: 302,
         Diners: 3,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             501
@@ -94,8 +94,8 @@ const defaultState = [
         Table: 401,
         Diners: 4,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             402
@@ -105,8 +105,8 @@ const defaultState = [
         Table: 402,
         Diners: 4,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             401
@@ -116,8 +116,8 @@ const defaultState = [
         Table: 501,
         Diners: 5,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             302
@@ -127,8 +127,8 @@ const defaultState = [
         Table: 601,
         Diners: 6,
         Status: 'empty',
-        mobile: false,
-        diners: false,
+        Mobile: false,
+        someDiners: false,
         startTimetamp: false,
         Concat: [
             203
@@ -143,6 +143,9 @@ const tables = (state = defaultState, action) => {
             newState.map((item, index) => {
                 if (item.Table === action.payload.id) {
                     newState[index].Status = action.payload.status;
+                    newState[index].Mobile = action.payload.data.Mobile;
+                    newState[index].startTimetamp = action.payload.data.startTimetamp;
+                    newState[index].someDiners = action.payload.data.someDiners;
                 }
             });
             return newState;

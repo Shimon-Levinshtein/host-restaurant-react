@@ -6,10 +6,11 @@ import Item from './Item/Item'
 const CompletedOrders = props => {
 
     const completedOrdersList = props.completedOrdersList;
-
     const listOrderHandler = () => {
         return completedOrdersList.map((item, index) => (
-            <Item key={index} itemData={item} />
+            <div key={index}>
+            {item.status === 'end' && <Item itemData={item} />}
+            </div>
         ))
     };
 

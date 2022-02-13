@@ -1,3 +1,5 @@
+import { REMOVE_FROM_ORDER_LIST } from '../../actions/table';
+
 const defaultState = [
     {
       Mobile: "053-111-2222",
@@ -59,6 +61,11 @@ const defaultState = [
 
 const orders = (state = defaultState, action) => {
     switch (action.type) {
+      case REMOVE_FROM_ORDER_LIST:
+            const newState = state.filter(item => {
+              return item.Mobile !== action.payload;
+            })
+            return newState;
         default:
             return state;
 

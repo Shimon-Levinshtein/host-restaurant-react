@@ -1,6 +1,6 @@
 
 export const hostOrders = (tablesList, ordersList) => {
-    const order = ordersList[10];
+    const order = ordersList[0];
     let bestResult = false;
     let tableNum = false;
     let data = false;
@@ -12,7 +12,12 @@ export const hostOrders = (tablesList, ordersList) => {
             if (table.Diners >= order.Diners) {
                 bestResult = table.Diners;
                 tableNum = table.Table;
-                data = table;
+                data = {
+                    ...table,
+                     startTimetamp: new Date(),
+                     someDiners: order.Diners,
+                     Mobile: order.Mobile,
+                    };
                 return;
             }
         };
@@ -21,7 +26,12 @@ export const hostOrders = (tablesList, ordersList) => {
                 if (table.Diners < bestResult) {
                     bestResult = table.Diners;
                     tableNum = table.Table;
-                    data = table;
+                    data = {
+                        ...table,
+                         startTimetamp: new Date(),
+                         someDiners: order.Diners,
+                         Mobile: order.Mobile,
+                        };
                     return;
                 }
             }
