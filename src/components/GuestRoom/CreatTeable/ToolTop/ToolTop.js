@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 const ToolTop = props => {
 
     const tibelData = props.tibelData;
-    console.log(tibelData);
     return (
         <div className={styles.continer}>
             <div className={styles.text_continer}>

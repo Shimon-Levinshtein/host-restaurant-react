@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import ToolTop from './ToolTop/ToolTop';
 
 const CreatTeable = props => {
-
+    const status = props.status;
     const tibelData = props.tibelData;
-    const [shape, setShape ] = useState(styles.round);
+    const [shape, setShape] = useState(styles.round);
+    const [styleDivTable, setStyleDivTable] = useState({});
     useEffect(() => {
         switch (tibelData.Diners) {
             case 1:
@@ -27,11 +28,29 @@ const CreatTeable = props => {
             default:
                 break;
         };
-    }, [tibelData])
+    }, [tibelData]);
+
+    useEffect(() => {
+        switch (status) {
+            case 'start':
+                if (tibelData.Diners === 3) {
+                    setStyleDivTable({borderBottomColor: 'red'});
+                } else {
+                    setStyleDivTable({backgroundColor: 'red'});
+                };
+                break;
+            // case 'start':
+            //     setStyleDivTable(styleTable(tibelData.Diners)); /// orange
+            //     break;
+            default:
+                break;
+        };
+    }, [status])
+
     return (
         <div className={styles.continer}>
-            <ToolTop tibelData={tibelData}/>
-            <div className={shape}>
+            <ToolTop tibelData={tibelData} />
+            <div className={shape} style={styleDivTable}>
             </div>
         </div>
     );

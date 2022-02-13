@@ -6,11 +6,9 @@ import CreatTeable from './CreatTeable/CreatTeable';
 const GuestRoom = props => {
 
     const tablesList = props.tablesList;
-    // console.table(tablesList)
-
     const tibelsHandler = () => {
         return tablesList.map((tibel, index) => (
-            <CreatTeable key={index} tibelData={tibel} />
+            <CreatTeable key={index} tibelData={tibel} status={tibel.Status}/>
         ))
     };
 

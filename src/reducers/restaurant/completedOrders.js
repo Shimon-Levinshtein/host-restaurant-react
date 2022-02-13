@@ -1,3 +1,5 @@
+import { ADD_TO_CART } from '../../actions/completedOrders';
+
 const defaultState = [
   // {
   //   Mobile: 'string identifier like (053-xxx-xxxx)',
