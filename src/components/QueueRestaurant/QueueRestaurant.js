@@ -17,7 +17,9 @@ const QueueRestaurant = props => {
         <div className={styles.continer}>
             <div className={styles.waiting_queue}>
                 <h3>Waiting queue</h3>
-                {listOrderHandler()}
+                <div id="sukkotList-contining-items-style-15" className={styles.scrollBlock}>
+                    {listOrderHandler()}
+                </div>
             </div>
         </div>
     );
