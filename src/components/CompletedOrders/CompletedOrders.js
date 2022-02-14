@@ -9,7 +9,7 @@ const CompletedOrders = props => {
     const listOrderHandler = () => {
         return completedOrdersList.map((item, index) => (
             <div key={index}>
-            {item.status === 'end' && <Item itemData={item} />}
+                {item.status === 'end' && <Item itemData={item} />}
             </div>
         ))
     };
@@ -18,7 +18,9 @@ const CompletedOrders = props => {
         <div className={styles.continer}>
             <div className={styles.item}>
                 <h3>Completed orders</h3>
-                {listOrderHandler()}
+                <div id="sukkotList-contining-items-style-15" className={styles.scrollBlock}>
+                    {listOrderHandler()}
+                </div>
             </div>
         </div>
     );

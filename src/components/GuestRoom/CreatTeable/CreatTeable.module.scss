@@ -1,6 +1,9 @@
 .continer {
     margin: 30px;
-    position: relative;
+    width: fit-content;
+    .continingToolTop {
+        position: relative;
+    }
     cursor: pointer;
     .round {
         background-color: aqua;

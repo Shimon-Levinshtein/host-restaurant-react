@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./CreatTeable.module.scss";
+import "./CreatTeable.scss";
 import { connect } from 'react-redux';
 import ToolTop from './ToolTop/ToolTop';
 import { endOrderCard } from '../../../actions/completedOrders';
@@ -57,8 +58,8 @@ const CreatTeable = props => {
                         setStyleDivTable({ backgroundColor: 'aqua' });
                     };
                     props.endOrderCard(tableData.Table)
-                    props.changeTableStatus({ 
-                        id: tableData.Table, 
+                    props.changeTableStatus({
+                        id: tableData.Table,
                         status: 'empty',
                         data: {
                             Mobile: false,
@@ -76,13 +77,15 @@ const CreatTeable = props => {
 
 
     return (
-        <div 
-        className={styles.continer} 
-        onClick={() => setDisplayToolTop(!displayToolTop)}
-        onMouseOut={() => setDisplayToolTop(false)}
+        <div
+            className={styles.continer  + ' ' + 'table' + ' ' + 'table-' + tableData.Table}
+            onClick={() => setDisplayToolTop(!displayToolTop)}
+            onMouseOut={() => setDisplayToolTop(false)}
         >
-            <ToolTop tableData={tableData} displayToolTop={displayToolTop}/>
-            <div id={'table-'+ tableData.Table} className={shape} style={styleDivTable}>
+            <div className={styles.continingToolTop}>
+                <ToolTop tableData={tableData} displayToolTop={displayToolTop} />
+            </div>
+            <div className={shape} style={styleDivTable}>
                 {tableData.Table}
             </div>
         </div>
