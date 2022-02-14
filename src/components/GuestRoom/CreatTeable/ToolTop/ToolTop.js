@@ -7,11 +7,10 @@ const ToolTop = props => {
     const tableData = props.tableData;
     console.log(tableData);
     return (
-        // <div className={styles.continer} style={{ display: props.displayToolTop ? 'block' : 'none' }}>
         <div className={styles.continer} style={{
             top: tableData.Mobile ? '-90px' : '-40px',
             minWidth: tableData.Mobile ? '130px' : 'fit-content',
-            left: tableData.Diners === 1 && tableData.Mobile ? '-24px' : '',
+            left: tableData.Diners === 1 && tableData.Mobile ? '-35px' : tableData.Diners === 4 && tableData.Mobile ? '-15px' : '',
             display: props.displayToolTop ? 'block' : 'none'
             }}>
             <div className={styles.text_continer}>

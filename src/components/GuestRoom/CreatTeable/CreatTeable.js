@@ -53,9 +53,9 @@ const CreatTeable = props => {
                 }, 60000);
                 setTimeout(() => {
                     if (tableData.Diners === 3) {
-                        setStyleDivTable({ borderBottomColor: 'aqua' });
+                        setStyleDivTable({ borderBottomColor: 'rgb(184, 184, 184)' });
                     } else {
-                        setStyleDivTable({ backgroundColor: 'aqua' });
+                        setStyleDivTable({ backgroundColor: 'rgb(184, 184, 184)' });
                     };
                     props.endOrderCard(tableData.Table)
                     props.changeTableStatus({

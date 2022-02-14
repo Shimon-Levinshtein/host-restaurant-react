@@ -50,10 +50,10 @@ const Host = props => {
 
     return (
         <>
-        {/* <div className={styles.continer}>
+        <div className={styles.continer}>
             <img src={waiterSvg}></img>
             <h1>HOST</h1>
-        </div> */}
+        </div>
         </>
     );
 };

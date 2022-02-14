@@ -8,12 +8,18 @@ import CompletedOrders from "./components/CompletedOrders/CompletedOrders";
 function App() {
   return (
     <div className={styles.continet_app}>
-      <div className={styles.left}>
+      <div className={styles.header}>
         <Host />
-        <QueueRestaurant />
+        <div className={styles.titleHeader}>
+          <h1>Welcome</h1>
+          <h2>To the restaurant</h2>
+        </div>
       </div>
-      <GuestRoom />
-      <CompletedOrders />
+      <div className={styles.body}>
+        <QueueRestaurant />
+        <GuestRoom />
+        <CompletedOrders />
+      </div>
     </div>
   );
 }
