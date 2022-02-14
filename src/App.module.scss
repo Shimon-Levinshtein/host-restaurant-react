@@ -19,7 +19,7 @@ body {
                 font-size: 100px;
                 font-weight: 900;
                 margin-bottom: 0px;
-                margin-top: 40px;
+                margin-top: 60px;
                 height: 90px;
                 line-height: 90px;
             }
@@ -30,6 +30,15 @@ body {
                 margin-bottom: 0px;
                 height: 40px;
                 line-height: 40px;
+            }
+        }
+        .iconsContiner {
+            padding: 10px;
+            margin-right: 20px;
+            img {
+                width: 60px;
+                height: 50px;
+                color: white;
             }
         }
     }
