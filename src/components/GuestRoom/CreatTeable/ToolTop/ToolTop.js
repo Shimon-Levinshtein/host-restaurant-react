@@ -4,22 +4,22 @@ import { connect } from 'react-redux';
 
 const ToolTop = props => {
 
-    const tibelData = props.tibelData;
+    const tableData = props.tableData;
     return (
         <div className={styles.continer} style={{ display: props.displayToolTop ? 'block' : 'none' }}>
             <div className={styles.text_continer}>
                 <div className={styles.arrow} />
-                {tibelData.Mobile && <div className={styles.text}>
-                    Mobile: {tibelData.Mobile}
+                {tableData.Mobile && <div className={styles.text}>
+                    Mobile: {tableData.Mobile}
                 </div>}
-                {tibelData.someDiners && <div className={styles.text}>
-                    Diners: {tibelData.someDiners}
+                {tableData.someDiners && <div className={styles.text}>
+                    Diners: {tableData.someDiners}
                 </div>}
-               {tibelData.startTimetamp && <div className={styles.text}>
-                    Start time: {tibelData.startTimetamp.toISOString().substr(11, 8)}:
+               {tableData.startTimetamp && <div className={styles.text}>
+                    Start time: {tableData.startTimetamp.toISOString().substr(11, 8)}:
                 </div>}
                 <div className={styles.text}>
-                    Table: {tibelData.Table}
+                    Table: {tableData.Table}
                 </div>
             </div>
         </div>

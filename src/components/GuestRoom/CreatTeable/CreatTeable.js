@@ -8,14 +8,13 @@ import { changeTableStatus } from '../../../actions/table';
 
 const CreatTeable = props => {
     const status = props.status;
-    const tibelData = props.tibelData;
-    if (tibelData.Status !== "empty") console.log(tibelData);
+    const tableData = props.tableData;
     const [shape, setShape] = useState(styles.pentagon);
     const [styleDivTable, setStyleDivTable] = useState({});
     const [displayToolTop, setDisplayToolTop] = useState(false);
 
     useEffect(() => {
-        switch (tibelData.Diners) {
+        switch (tableData.Diners) {
             case 1:
                 setShape(styles.round);
                 break;
@@ -34,32 +33,32 @@ const CreatTeable = props => {
             default:
                 break;
         };
-    }, [tibelData]);
+    }, [tableData]);
 
     useEffect(() => {
         switch (status) {
             case 'start':
-                if (tibelData.Diners === 3) {
+                if (tableData.Diners === 3) {
                     setStyleDivTable({ borderBottomColor: 'red' });
                 } else {
                     setStyleDivTable({ backgroundColor: 'red' });
                 };
                 setTimeout(() => {
-                    if (tibelData.Diners === 3) {
+                    if (tableData.Diners === 3) {
                         setStyleDivTable({ borderBottomColor: 'orange' });
                     } else {
                         setStyleDivTable({ backgroundColor: 'orange' });
                     };
                 }, 60000);
                 setTimeout(() => {
-                    if (tibelData.Diners === 3) {
+                    if (tableData.Diners === 3) {
                         setStyleDivTable({ borderBottomColor: 'aqua' });
                     } else {
                         setStyleDivTable({ backgroundColor: 'aqua' });
                     };
-                    props.endOrderCard(tibelData.Table)
+                    props.endOrderCard(tableData.Table)
                     props.changeTableStatus({ 
-                        id: tibelData.Table, 
+                        id: tableData.Table, 
                         status: 'empty',
                         data: {
                             Mobile: false,
@@ -82,8 +81,9 @@ const CreatTeable = props => {
         onClick={() => setDisplayToolTop(!displayToolTop)}
         onMouseOut={() => setDisplayToolTop(false)}
         >
-            <ToolTop tibelData={tibelData} displayToolTop={displayToolTop}/>
-            <div className={shape} style={styleDivTable}>
+            <ToolTop tableData={tableData} displayToolTop={displayToolTop}/>
+            <div id={'table-'+ tableData.Table} className={shape} style={styleDivTable}>
+                {tableData.Table}
             </div>
         </div>
     );

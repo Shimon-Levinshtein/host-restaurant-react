@@ -6,11 +6,13 @@ import CreatTeable from './CreatTeable/CreatTeable';
 const GuestRoom = props => {
 
     const tablesList = props.tablesList;
-    const tibelsHandler = () => {
-        return tablesList.map((tibel, index) => (
-            <CreatTeable key={index} tibelData={tibel} status={tibel.Status}/>
+    const tablesHandler = () => {
+        return tablesList.map((table, index) => (
+            <CreatTeable key={index} tableData={table} status={table.Status} />
         ))
     };
+
+   
 
     return (
         <div className={styles.continer}>
@@ -18,7 +20,7 @@ const GuestRoom = props => {
                 <h1>GUEST ROOM</h1>
             </div>
             <div className={styles.guest_room}>
-                {tibelsHandler()}
+                {tablesHandler()}
             </div>
         </div>
     );
