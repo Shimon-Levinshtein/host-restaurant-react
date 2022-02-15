@@ -56,7 +56,20 @@ const defaultState = [
     {
       Mobile: "053-555-6669",
       Diners: 3
-    }
+    },
+    // **********
+    {
+      Mobile: "053-555-6610",
+      Diners: 8
+    },
+    {
+      Mobile: "053-555-6611",
+      Diners: 7
+    },
+    {
+      Mobile: "053-555-6612",
+      Diners: 4
+    },
   ];
 
 const orders = (state = defaultState, action) => {

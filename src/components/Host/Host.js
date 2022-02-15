@@ -21,6 +21,7 @@ const Host = props => {
 
     useEffect(() => {
         if (isQueue && ordersList.length) {
+            setIsQueue(false);
             sendToTable();
         }
     }, [completedOrdersList]);
