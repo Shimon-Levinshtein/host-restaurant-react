@@ -77,7 +77,7 @@ const joinTableA = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-101')[0].style.left = '140px';
         document.getElementsByClassName('table-102')[0].style.left = '260px';
-    }, 9000);
+    }, 90000);
 }
 const joinTableB = () => {
     document.getElementsByClassName('table-103')[0].style.left = '175px';
@@ -85,7 +85,7 @@ const joinTableB = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-103')[0].style.left = '200px';
         document.getElementsByClassName('table-103')[0].style.top = '100px';
-    }, 9000);
+    }, 90000);
 }
 const joinTableC = () => {
     document.getElementsByClassName('table-103')[0].style.left = '235px';
@@ -93,7 +93,7 @@ const joinTableC = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-103')[0].style.left = '200px';
         document.getElementsByClassName('table-103')[0].style.top = '100px';
-    }, 9000);
+    }, 90000);
 }
 const joinTableD = () => {
     document.getElementsByClassName('table-201')[0].style.top = '325px';
@@ -101,7 +101,7 @@ const joinTableD = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-201')[0].style.top = '300px';
         document.getElementsByClassName('table-202')[0].style.top = '420px';
-    }, 9000);
+    }, 90000);
 }
 const joinTableE = () => {
     document.getElementsByClassName('table-401')[0].style.top = '245px';
@@ -109,7 +109,7 @@ const joinTableE = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-401')[0].style.top = '220px';
         document.getElementsByClassName('table-402')[0].style.top = '380px';
-    }, 9000);
+    }, 90000);
 }
 const joinTableF = () => {
     document.getElementsByClassName('table-302')[0].style.left = '370px';
@@ -117,7 +117,7 @@ const joinTableF = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-302')[0].style.left = '330px';
         document.getElementsByClassName('table-501')[0].style.left = '490px';
-    }, 9000);
+    }, 90000);
 }
 const joinTableG = () => {
     document.getElementsByClassName('table-203')[0].style.top = '395px';
@@ -125,7 +125,7 @@ const joinTableG = () => {
     setTimeout(() => {
         document.getElementsByClassName('table-203')[0].style.top = '420px';
         document.getElementsByClassName('table-601')[0].style.top = '220px';
-    }, 9000);
+    }, 90000);
 }
 //     '101-102'
 //     '101-103'
