@@ -86,7 +86,7 @@ const CreatTeable = props => {
                 <ToolTop tableData={tableData} displayToolTop={displayToolTop} />
             </div>
             <div className={shape} style={styleDivTable}>
-                {tableData.Table}
+                {/* {tableData.Table} */}
             </div>
         </div>
     );

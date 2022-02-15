@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from "./CompletedOrders.module.scss";
 import { connect } from 'react-redux';
-import Item from './Item/Item'
+import Item from './Item/Item';
+import DownloadJSON from './DownloadJSON/DownloadJSON'
 
 const CompletedOrders = props => {
 
@@ -16,6 +17,7 @@ const CompletedOrders = props => {
 
     return (
         <div className={styles.continer}>
+            <DownloadJSON />
             <div className={styles.item}>
                 <h3>Completed orders</h3>
                 <div id="sukkotList-contining-items-style-15" className={styles.scrollBlock}>
