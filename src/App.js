@@ -19,9 +19,9 @@ function App() {
           <h2>To the restaurant</h2>
         </div>
         <div className={styles.iconsContiner}>
-          <img src={ArtboardA}/>
-          <img src={ArtboardB}/>
+          {/* <img src={ArtboardA}/> */}
           <img src={ArtboardC}/>
+          <img src={ArtboardB}/>
           <img src={ArtboardD}/>
         </div>
       </div>

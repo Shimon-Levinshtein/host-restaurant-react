@@ -1,4 +1,10 @@
 .continer {
-    
- 
+    position: absolute;
+    cursor: pointer;
+    transition: 0.7s;
+    top: -40px;
+    right: -20px;
 }
+.continer:hover {
+    transform: scale(1.1);
+  }
