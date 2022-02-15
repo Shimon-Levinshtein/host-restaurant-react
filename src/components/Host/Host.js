@@ -5,6 +5,7 @@ import waiterSvg from "./svg/waiter-svgrepo-com.svg";
 import { hostOrders } from "./functions/tableArrangement";
 import { changeTableStatus, removeFromOrderList } from '../../actions/table';
 import { addToCard } from '../../actions/completedOrders';
+import cloneDeep from 'lodash/cloneDeep';
 
 const Host = props => {
     const ordersList = props.ordersList;
@@ -25,7 +26,7 @@ const Host = props => {
     }, [completedOrdersList]);
     
     const sendToTable = () => {
-        const result = hostOrders(tablesList, ordersList);
+        const result = hostOrders(cloneDeep(tablesList), ordersList);
         setTimeout(() => {
             if (result.tableNum) {
                 props.changeTableStatus({
