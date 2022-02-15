@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const ToolTop = props => {
 
     const tableData = props.tableData;
-    console.log(tableData);
+    
     return (
         <div className={styles.continer} style={{
             top: tableData.Mobile ? '-90px' : '-40px',

@@ -1,6 +1,10 @@
+import { joinTables } from './joinTables';
 
 export const hostOrders = (tablesList, ordersList) => {
     const order = ordersList[0];
+    // **********************************
+    joinTables(tablesList, order)
+    // **********************************
     let bestResult = false;
     let tableNum = false;
     let data = false;
@@ -37,5 +41,8 @@ export const hostOrders = (tablesList, ordersList) => {
             }
         };
     });
+    if (!bestResult) {
+        return joinTables(tablesList, order);
+    }
     return {bestResult: bestResult, tableNum: tableNum, data: data};
 }
