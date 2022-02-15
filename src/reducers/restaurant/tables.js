@@ -140,14 +140,34 @@ const tables = (state = defaultState, action) => {
     switch (action.type) {
         case CHANGE_TABLE_STATUS:
             const newState = [...state];
-            newState.map((item, index) => {
-                if (item.Table === action.payload.id) {
-                    newState[index].Status = action.payload.status;
-                    newState[index].Mobile = action.payload.data.Mobile;
-                    newState[index].startTimetamp = action.payload.data.startTimetamp;
-                    newState[index].someDiners = action.payload.data.someDiners;
-                }
-            });
+            if (typeof action.payload.id === 'object') {
+                newState.map((item, index) => {
+                    if (item.Table === action.payload.id.a) {
+                        newState[index].Status = action.payload.status;
+                        newState[index].Mobile = action.payload.data.Mobile;
+                        newState[index].startTimetamp = action.payload.data.startTimetamp;
+                        newState[index].someDiners = action.payload.data.someDiners;
+                    }
+                });
+                newState.map((item, index) => {
+                    if (item.Table === action.payload.id.b) {
+                        newState[index].Status = action.payload.status;
+                        newState[index].Mobile = action.payload.data.Mobile;
+                        newState[index].startTimetamp = action.payload.data.startTimetamp;
+                        newState[index].someDiners = action.payload.data.someDiners;
+                    }
+                });
+            }
+            if (typeof action.payload.id === 'number') {
+                newState.map((item, index) => {
+                    if (item.Table === action.payload.id) {
+                        newState[index].Status = action.payload.status;
+                        newState[index].Mobile = action.payload.data.Mobile;
+                        newState[index].startTimetamp = action.payload.data.startTimetamp;
+                        newState[index].someDiners = action.payload.data.someDiners;
+                    }
+                });
+            }
             return newState;
         default:
             return state;

@@ -26,9 +26,9 @@ const Host = props => {
     }, [completedOrdersList]);
     
     const sendToTable = () => {
-        const result = hostOrders(cloneDeep(tablesList), ordersList);
         setTimeout(() => {
-            if (result.tableNum) {
+            const result = hostOrders(cloneDeep(tablesList), cloneDeep(ordersList));
+            if (result.bestResult) {
                 props.changeTableStatus({
                     id: result.tableNum,
                     data: result.data,
@@ -37,8 +37,8 @@ const Host = props => {
                 props.removeFromOrderList(result.data.Mobile);
                 props.addToCard({
                     Mobile: result.data.Mobile,
-                    Diners: result.data.Diners,
-                    tables: [result.tableNum],
+                    Diners: result.data.someDiners,
+                    tables: typeof result.tableNum === 'object' ? [result.tableNum.a, result.tableNum.a] : [result.tableNum],
                     start_time: new Date(),
                     end_time: false,
                     status: 'start',
@@ -46,7 +46,7 @@ const Host = props => {
             } else {
                 setIsQueue(true);
             };
-        }, 500);
+        },500);
     };
 
     return (
