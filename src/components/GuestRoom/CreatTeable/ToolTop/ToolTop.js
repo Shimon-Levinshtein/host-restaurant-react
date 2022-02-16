@@ -22,7 +22,7 @@ const ToolTop = props => {
                     Diners: {tableData.someDiners}
                 </div>}
                {tableData.startTimetamp && <div className={styles.text}>
-                    Start time: {tableData.startTimetamp.toISOString().substr(11, 8)}
+                    Start time: {tableData.startTimetamp.toLocaleString().substr(11, 8)}
                 </div>}
                 <div className={styles.text}>
                     Table: {tableData.Table}

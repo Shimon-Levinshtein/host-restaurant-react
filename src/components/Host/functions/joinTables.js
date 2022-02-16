@@ -41,7 +41,6 @@ export const joinTables = (tablesList, order) => {
 
 const joinTablesOnFloor = (arrTables) => {
     const joinId = arrTables.sort((a, b) => a - b).join('-');
-    console.log(joinId);
     switch (joinId) {
         case '101-102':
             joinTableA();

@@ -39,7 +39,7 @@ const Host = props => {
                 props.addToCard({
                     Mobile: result.data.Mobile,
                     Diners: result.data.someDiners,
-                    tables: typeof result.tableNum === 'object' ? [result.tableNum.a, result.tableNum.a] : [result.tableNum],
+                    tables: typeof result.tableNum === 'object' ? [result.tableNum.a, result.tableNum.b] : [result.tableNum],
                     start_time: new Date(),
                     end_time: false,
                     status: 'start',
